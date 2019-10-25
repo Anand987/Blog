@@ -32,7 +32,7 @@ if (isset($_POST['signup-submit'])) {
         exit();
     } 
     
-    elseif (!preg_match("/^[a-zA-Z]*$/", $fullname)) {
+    elseif (!preg_match("/^[a-zA-Z\s]*$/", $fullname)) {
         header("Location:../signup.php?error=invalidname&mail=" . $email . "u_name=" . $username);
         exit();
     }

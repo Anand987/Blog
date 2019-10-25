@@ -38,7 +38,7 @@
                     <i class="material-icons align-top">add</i>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="includes/create.blog.php">Create Blog</a>
+                    <a class="dropdown-item" href="create.blog.php">Create Blog</a>
                     <a class="dropdown-item" href="#">Add Image</a>
                     <!-- <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a> -->

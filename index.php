@@ -6,10 +6,8 @@ include "includes/header.php"
         <div class="col-sm-8 offset-sm-1">
             <div class="container">
                 <h5 class="mb-4 font-weight-bolder text-primary">Recommended Blogs</h5>
-                <?php
-                for ($i = 0; $i < 5; $i++) {
+                <?php             
                     include "includes/blog.inc.php";
-                }
                 ?>
             </div>
         </div>
