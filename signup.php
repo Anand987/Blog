@@ -11,10 +11,7 @@ include "includes/header.php";
                 <h4 class="font-weight-bolder mt-2"><span class="text-success">EDU</span> BLOG</h4>
             </div>
             <div class="col-sm-6 text-center">
-                <form class="mt-3" action="includes/signup.inc.php" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input type="file" name="u_photo">
-                    </div>
+                <form class="mt-3" action="includes/signup.inc.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" id="name" name="u_fllname" placeholder="Full Name">
                     </div>

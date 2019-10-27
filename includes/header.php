@@ -21,9 +21,9 @@
   include "dbh.inc.php"
   ?>
 
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm mb-4 bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-primary">
     <div class="container">
-      <a class="navbar-brand text-uppercase" href="index.php">Blog</a>
+      <a class="navbar-brand text-uppercase" href="index.php"><span class="font-weight-bold" style="color: #00E676;">EDU</span> Blog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,10 +46,10 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" class="img-fluid rounded-pill" style="width: 25px !important;">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" class="img-fluid rounded-pill" style="width: 20px !important;">
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="profile.php">view profile</a>
+                    <a class="dropdown-item" href="profile.php">Profile</a>
                     <form action="includes/logout.inc.php" method="post">
                       <button class="btn btn-link text-decoration-none dropdown-item" type="submit" name="logout-submit">Logout</button>
                     </form>

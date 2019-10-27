@@ -4,13 +4,6 @@ if (isset($_POST['signup-submit'])) {
     //accessing dbh.inc.php file for connection establishment
     require 'dbh.inc.php';
 
-    //storing value of form in variables
-    $fullname = $_POST['u_fllname'];
-    $username = $_POST['u_name'];
-    $email = $_POST['u_email'];
-    $password = $_POST['pwd'];
-    $passwordRepeat = $_POST['pwdRpt'];
-
     //for checking emptyfields error = ERROR HANDLING
     if (empty($username) || empty($fullname) || empty($email) || empty($password) || empty($passwordRepeat)) {
         header("Location: ../signup.php?error=emptyfields&u_name=" . $username . "&email=" . $email . "&fullname=" . $fullname);
