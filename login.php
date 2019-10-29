@@ -6,7 +6,7 @@ include "includes/header.php";
     <!-- Login Form -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-4 offset-sm-4">
+            <div class="col-sm-4 offset-sm-4" style="min-height: 630px;">
                 <div class="mt-5">
                     <div class="m-auto text-center">
                         <img class="mb-2" src="assets/images/logo.png" alt="" height="200" width="200">

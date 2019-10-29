@@ -1,11 +1,12 @@
 <?php
 require "dbh.inc.php";
-$sql = "SELECT * FROM usersblogs INNER JOIN users ON usersblogs.u_id LIKE users.u_id;";
+$sql = "SELECT * FROM usersblogs INNER JOIN users ON usersblogs.u_id LIKE users.u_id ORDER BY usersblogs.u_id ASC;";
 $result = mysqli_query($conn, $sql);
 $queryResults = mysqli_num_rows($result);
 
 if ($queryResults > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
+        $startdate = strtotime(str_replace('-','/', $row['b_date']));
         echo '
         <div class="card my-3">
         <div class="card-header bg-white">
@@ -27,7 +28,7 @@ if ($queryResults > 0) {
                 <a class="text-dark text-decoration-none" href="profile.php?profile='.$row['u_fll_name'].'">
                     <h6 class="card-title mb-0">'. $row['u_fll_name'] .'</h6>
                 </a>
-                <p class="text-secondary mb-0 f-12">'. $row['b_date'] .'</p>
+                <p class="text-secondary mb-0 f-12">'. date("M d" , $startdate) .'</p>
             </div>
         </div>
     </div>

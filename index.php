@@ -15,7 +15,7 @@ include "includes/header.php"
 <div class="container-fluid">
     <div class="row">
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-image1 w-100" style="height: 50vh;">
-            <div class="col-md-6 px-0">
+            <div class="col-md-6 offset-1 px-0">
                 <h1 class="display-4 font-italic">WELECOME to <span class="font-weight-bold" style="color: #00E676;">EDU</span> BLOG</h1>
                 <p class="lead my-3">This is a platform for educational purpose in use of college students via college only</p>
                 <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Know more about us!!</a></p>
@@ -33,25 +33,20 @@ include "includes/header.php"
         </div>
         <div class="col-sm-2 border-left pl-4">
             <div class="border-bottom pb-3 d-md-block">
-                <h5 class="font-weight-bolder text-primary">Popular Blogs</h5>
-                <ol class="mt-3">
-                    <li>
-                        <h6 class="mb-0">C++ Language guide</h6>
-                        <p class="f-12">Author Name</p>
-                    </li>
-                    <li>
-                        <h6 class="mb-0">Python Snippets</h6>
-                        <p class="f-12">Author Name</p>
-                    </li>
-                    <li>
-                        <h6 class="mb-0">AutoCad Cheats</h6>
-                        <p class="f-12">Author Name</p>
-                    </li>
-                    <li>
-                        <h6 class="mb-0">Wiring Guide</h6>
-                        <p class="f-12">Author Name</p>
-                    </li>
-                </ol>
+                <h5 class="font-weight-bolder text-primary">Category</h5>
+                <ul class="list-group list-group-flush">
+                   <?php
+                    require "includes/dbh.inc.php";
+                    $sql = "SELECT b_c_name FROM blog_category";
+                    $result = mysqli_query($conn, $sql);
+                    $queryResults = mysqli_num_rows($result);
+                    if ($queryResults > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo '<a href="#" class="list-group-item list-group-item-action">' . $row['b_c_name'] . '</a>';
+                        }
+                    }
+                    ?>
+                </ul>
             </div>
             <div class="mt-4">
                 <h5 class="font-weight-bolder text-primary">Trending Blogs</h5>

@@ -5,7 +5,7 @@ include "includes/header.php";
 <main>
     <!-- signup Form -->
     <div class="container">
-        <div class="row align-items-center" style="margin-top: 12%;">
+        <div class="row align-items-center" style="margin-top: 5%; min-height: 580px;">
             <div class="col-sm-6 text-center">
                 <img src="assets/images/logo.png" alt="" height="250" width="250">
                 <h4 class="font-weight-bolder mt-2"><span class="text-success">EDU</span> BLOG</h4>

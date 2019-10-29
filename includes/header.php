@@ -16,50 +16,47 @@
 </head>
 
 <body>
-
+<!-- FONT AWESOME SCRIPT -->
+<script src="https://kit.fontawesome.com/a1f2174f04.js" crossorigin="anonymous"></script>
   <?php
   include "dbh.inc.php"
   ?>
-
+<div style="height: 10px; background-color: #0d47a1;"></div>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-primary">
     <div class="container">
-      <a class="navbar-brand text-uppercase" href="index.php"><span class="font-weight-bold" style="color: #00E676;">EDU</span> Blog</a>
+      <a href="index.php" class="navbar-brand"><span class="text-success font-weight-bold">EDU</span>BLOG</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a href="posts.php" class="nav-link">Posts</a></li>
+        
           <?php 
             if (isset($_SESSION['user_id'])) {
               echo '
-                  <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="material-icons align-top">add</i>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="create.blog.php">Create Blog</a>
-                    <a class="dropdown-item" href="#">Add Image</a>
-                    <!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a> -->
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" class="img-fluid rounded-pill" style="width: 20px !important;">
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="profile.php">Profile</a>
+              
+              <li class="nav-item"><a href="create.blog.php" class="nav-link">Add Posts</a></li>
+              <li class="nav-item"><a href="category.php" class="nav-link">Categories</a></li>
+              <li class="nav-item"><a href="about.php" class="nav-link">About us</a></li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+              <a href="profile.php?profile='. $_SESSION['u_fll_name'].'" class="nav-link"> <i class="fas fa-user text-white"></i> My Profile</a>
+              </li>
+                <li class="nav-item">                    
                     <form action="includes/logout.inc.php" method="post">
-                      <button class="btn btn-link text-decoration-none dropdown-item" type="submit" name="logout-submit">Logout</button>
+                      <button class="btn btn-link text-danger text-decoration-none font-weight-bold" type="submit" name="logout-submit"> <i class="fas fa-sign-out-alt"></i> Logout</button>
                     </form>
-                    <!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a> -->
-                  </div>
-                </li>
+                </li
+               
               ';
             } else {
               echo '
+              <li class="nav-item"><a href="about.php" class="nav-link">About us</a></li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link mx-2" href="login.php">Login</a>
                 </li>

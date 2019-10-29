@@ -17,6 +17,7 @@
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         if ($row = mysqli_fetch_assoc($result)) {
+            $startdate = strtotime(str_replace('-','/', $row['b_date']));
 ?>
 
 <div class="container mt-3">
@@ -59,9 +60,16 @@
         <?php
                             echo '
                             <p>'. $row['b_content'] .'</p>
-                            <div class="blockquote-footer">'. $author .' <cite title="Source Title">'. $row['b_date'] .'</cite></div>
+                            <div class="blockquote-footer">'. $author .' <cite title="Source Title">'. date("M d" , $startdate) .'</cite></div>
                             ';
                         ?>
+        </div>
+
+        <div class="card-footer">
+            <!-- show comments from database-->
+                
+            <!-- form to post comments -->
+            <form action="" method="post"></form>
         </div>
 
     </div>
