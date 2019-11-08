@@ -18,7 +18,7 @@ include "includes/header.php"
             <div class="col-md-6 offset-1 px-0">
                 <h1 class="display-4 font-italic">WELECOME to <span class="font-weight-bold" style="color: #00E676;">EDU</span> BLOG</h1>
                 <p class="lead my-3">This is a platform for educational purpose in use of college students via college only</p>
-                <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Know more about us!!</a></p>
+                <p class="lead mb-0"><a href="about.php" class="text-white font-weight-bold">Know more about us!!</a></p>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@ include "includes/header.php"
                     $queryResults = mysqli_num_rows($result);
                     if ($queryResults > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<a href="#" class="list-group-item list-group-item-action">' . $row['b_c_name'] . '</a>';
+                            echo '<a href="index.php?" class="list-group-item list-group-item-action">' . $row['b_c_name'] . '</a>';
                         }
                     }
                     ?>

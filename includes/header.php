@@ -42,9 +42,6 @@
               <li class="nav-item"><a href="about.php" class="nav-link">About us</a></li>
               </ul>
               <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-              <a href="profile.php?profile='. $_SESSION['u_fll_name'].'" class="nav-link"> <i class="fas fa-user text-white"></i> My Profile</a>
-              </li>
                 <li class="nav-item">                    
                     <form action="includes/logout.inc.php" method="post">
                       <button class="btn btn-link text-danger text-decoration-none font-weight-bold" type="submit" name="logout-submit"> <i class="fas fa-sign-out-alt"></i> Logout</button>

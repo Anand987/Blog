@@ -18,7 +18,7 @@ include "includes/header.php"
 <section class="container py-2 mb-4">
         <div class="row">
             <div class="col-lg-10 offset-lg-1" style="min-height: 530px;">
-                <form class="" action="createcategory.php" method="post">
+                <form class="" action="includes/createcategory.php" method="post">
                     <div class="card">
                         <div class="card-header">
                             <h4>Add New Category</h4>

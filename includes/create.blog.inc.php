@@ -28,13 +28,13 @@ if (isset($_POST['create-blog'])) {
             }
         }
 
-        $sql = "INSERT INTO `usersblogs`(`b_title`, `b_subtitle`, `b_content`, `u_id` , `b_c_id`) VALUES (?,?,?,?,?);";
+        $sql = "INSERT INTO `usersblogs`(`b_title`, `b_subtitle`, `b_content`, `u_id` , `category`) VALUES (?,?,?,?,?);";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location../signup.php?error=sqlerror");
             exit();
         } else {
-            mysqli_stmt_bind_param($stmt, "sssss", $blog_title, $blog_subtitle, $blog_content, $author_id ,$blog_category_id);
+            mysqli_stmt_bind_param($stmt, "sssss", $blog_title, $blog_subtitle, $blog_content, $author_id ,$blog_category);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
             header("Location:../create.blog.php?createblog=success");

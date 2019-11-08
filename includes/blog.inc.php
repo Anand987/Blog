@@ -9,13 +9,13 @@ if ($queryResults > 0) {
         $startdate = strtotime(str_replace('-','/', $row['b_date']));
         echo '
         <div class="card my-3">
-        <div class="card-header bg-white">
-            <a class="text-dark text-decoration-none" href="viewblog.php?title='.$row['b_title'].'&author='.$row['u_fll_name'].'">
+        <div class="card-header bg-primary text-light">
+            <a class="text-light text-decoration-none" href="viewblog.php?title='.$row['b_title'].'&author='.$row['u_fll_name'].'">
                 <h5 class="mb-0">'. $row['b_title'] .'</h5>
             </a>
         </div>
         <div class="card-body">
-            <a class="text-decoration-none text-dark" href="viewblog.php?title='.$row['b_title'].'">
+            <a class="text-decoration-none text-dark" href="viewblog.php?title='.$row['b_title'].'&author='.$row['u_fll_name'].'">
                 <p class="mb-0">'. substr($row['b_content'],0,200) .'...
                 </p>
             </a>

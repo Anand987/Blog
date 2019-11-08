@@ -29,7 +29,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 </style>
 
 <div class="container">
-    <div class="row">
+    <div class="row" style="min-height: 517px;">
         <div class="col-sm-12 p-4 bg-white">
             <h4 class="ml-3"><?php
                                 echo $author_name
